@@ -1,141 +1,65 @@
-# Airbnb-Data-Analytics
-This project explores Airbnb listing data to uncover trends in pricing, availability, neighborhood popularity, and room types. Using data visualization tools like Matplotlib, Seaborn, and Folium, the analysis reveals key insights such as which areas are most in demand, how prices vary by location and room type .
-🧾 Project Title:
-“Exploratory Data Analysis & Visualization of Airbnb Listings”
-📌 1. Project Objective
-The goal of this project is to understand the Airbnb ecosystem in a specific city or globally through detailed data analysis and visualizations. It aims to:
+# Airbnb Data Analysis and Visualization
 
-Identify popular neighborhoods
 
-Analyze price trends
+ ![image](https://github.com/praveendecode/Airbnb_Analysis/assets/95226524/8bf44dd8-8c13-4dd6-ba7d-40e9938ea361)
 
-Understand host behavior
 
-Explore room type availability
+ 
+# Overview
+   The Airbnb Data Analysis and Visualization project is a comprehensive data exploration and presentation effort. It involves data collection, preprocessing, ETL work, and the creation of an interactive Streamlit user interface. The project aims to provide insights and make Airbnb data more accessible and understandable.
 
-Detect outliers or unusual patterns
+# Features
+- Data Collection: Gathered Airbnb data from various sources, including MongoDB.
+- Data Preprocessing: Cleaned and prepared the data for analysis. 
+- ETL (Extract, Transform, Load): Converted data from MongoDB to structured DataFrames.
+- Exploratory Data Analysis (EDA): Performed in-depth analysis and visualization of Airbnb data.
+- Interactive Streamlit UI: Developed a user-friendly interface for data exploration and presentation.
+- Tableau Dashboard : Interactive eye-catching dashboard with awesome filter
 
-📁 2. Dataset Overview
-The dataset usually includes information such as:
+# Getting Started
 
-Listing ID & Name
+1. Clone the repository:
+   
+         https://github.com/praveendecode/Airbnb_Analysis
 
-Host Information
+3. Install required packages:
+   
+        pip install -r requirements.txt
 
-Neighbourhood & Location (Latitude/Longitude)
+5. Run the Streamlit app:
 
-Room Type (Entire home/apt, Private room, Shared room)
+       streamlit run app.py
 
-Price
+7. Access the app in your browser :
 
-Minimum Nights
+       http://localhost:8501
 
-Number of Reviews
+4. Visit Tableau Dashbord  : [Visit Dashboard](https://public.tableau.com/views/airbnb_16981379902390/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
 
-Availability (days per year)
 
-You can download datasets from:
+# Methods
+- Data Collection: Web scraping, API access, database queries.
+- Data Preprocessing: Data cleaning, handling missing values, feature engineering.
+- ETL Work: MongoDB data extraction, data transformation using Pandas.
+- EDA: Visualization with Matplotlib, Seaborn, and Plotly.
+- Streamlit UI: Streamlit library for building interactive web applications.
 
-Inside Airbnb
+# Skills Covered
+- Data collection and integration.
+- Data cleaning and preprocessing.
+- ETL techniques for data transformation.
+- Exploratory Data Analysis (EDA).
+- Data visualization.
+- Web application development with Streamlit.
+- Tableau Public
 
-Kaggle
 
-Example dataset: Airbnb NYC 2023
 
-🧹 3. Data Preprocessing
-Before analysis, the data must be cleaned:
+# Results
+- The project provides a user-friendly interface for exploring Airbnb data.
+- Insights and trends in the Airbnb market are presented through interactive charts and visualizations.
+- Data is cleaned, organized, and ready for further analysis.
 
-Remove missing or duplicate records (like listings without names or host IDs)
+# Connect Through LinkedIn For Queries
 
-Handle extreme values or outliers (e.g., listings priced at $10,000+ per night)
 
-Drop irrelevant columns (e.g., URLs, unnecessary IDs)
-
-Convert location values (latitude/longitude) to usable format for maps
-
-This step ensures accuracy in the visualizations and insights.
-
-📊 4. Data Analysis & Visualization
-Now the cleaned data is ready for exploratory data analysis (EDA) and visualization.
-
-📍 A. Neighborhood Analysis
-Visualize number of listings per neighborhood group (e.g., Manhattan, Brooklyn).
-
-Analyze which neighborhoods have higher average prices.
-
-Use heatmaps or bar charts to compare listing densities.
-
-Insight Example:
-
-“Manhattan has the most listings, but Brooklyn has more budget-friendly options.”
-
-💵 B. Price Distribution
-Use histograms or box plots to examine how prices are distributed.
-
-Identify median and average prices.
-
-Explore price outliers — extremely expensive listings.
-
-Insight Example:
-
-“Most listings fall under $200, but a few luxury listings drive up the average.”
-
-🛏 C. Room Type Analysis
-Visualize the distribution of room types (Entire home, Private room, Shared room).
-
-Compare average prices by room type.
-
-Understand which room types are most common in which neighborhoods.
-
-Insight Example:
-
-“Private rooms are most common, but entire homes command the highest prices.”
-
-📆 D. Availability & Booking Trends
-Analyze availability_365 column to see how often listings are available.
-
-Group listings by availability ranges (e.g., 0-100, 100-200 days).
-
-Spot seasonal or short-term rentals.
-
-Insight Example:
-
-“Most listings are only available for under 180 days, indicating part-time rentals.”
-
-📍 E. Location Mapping
-Use geolocation data (latitude & longitude) to map listings on an interactive map.
-
-Add filters for price, room type, or availability to see geographic patterns.
-
-Insight Example:
-
-“High-priced listings are concentrated in tourist-heavy areas like Downtown and Midtown.”
-
-📈 5. Key Findings & Business Insights
-At the end of the project, summarize insights that are useful for:
-
-Area	Insight
-Pricing Strategy	Listings with better reviews and location command higher prices
-Host Behavior	A few hosts own 50+ listings, suggesting commercial use
-Guest Preferences	Most guests prefer private rooms in central locations
-Geographic Trends	Tourist areas have the highest concentration of listings
-Affordability	Outer neighborhoods offer cheaper options with good availability
-
-📊 6. Optional Additions
-You can enhance your project with:
-
-Time Series Analysis (e.g., how listings grew over time)
-
-Review Sentiment Analysis (if review text is available)
-
-Interactive Dashboards using Tableau, Power BI, or Plotly
-
-Machine Learning Model to predict listing price based on features
-
-💡 7. Tools You Can Use
-Tool	Purpose
-Pandas / Excel	Data cleaning
-Seaborn / Matplotlib / Plotly	Visualizations
-Folium / GeoPandas	Mapping
-Power BI / Tableau	Dashboard creation
-Jupyter Notebook / Google Colab	Analysis environment
