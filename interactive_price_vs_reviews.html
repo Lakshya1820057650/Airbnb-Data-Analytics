@@ -1,0 +1,38 @@
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+
+# Load dataset
+df = pd.read_csv('Airbnb.csv')
+
+# Clean data
+df = df.dropna(subset=['price', 'number_of_reviews'])
+df = df[df['price'] <= 1000]
+
+# Create base scatter plot
+fig = px.scatter(
+    df,
+    x='number_of_reviews',
+    y='price',
+    title='Airbnb Price vs. Number of Reviews',
+    labels={
+        'number_of_reviews': 'Number of Reviews',
+        'price': 'Price (USD)'
+    },
+    hover_data=['price', 'number_of_reviews'],
+)
+
+# Add annotation for storytelling
+fig.add_annotation(
+    x=50,  # number_of_reviews
+    y=800,  # price
+    text="Premium listings with few reviews",
+    showarrow=True,
+    arrowhead=2,
+    ax=40,
+    ay=-40
+)
+
+# Show and save the figure
+fig.write_html('interactive_price_vs_reviews.html')
+fig.show()
